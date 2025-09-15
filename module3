@@ -1,0 +1,35 @@
+package module3;
+import java.util.Scanner;
+public class Module3 {
+		public static void main (String [] args) { 
+			Scanner scnr = new Scanner (System.in);
+			double weeklyIncome;
+			double avgTaxWithholding = 0;
+			
+			double taxRate10 = 0.10;
+			double taxRate15 = 0.15;
+			double taxRate20 = 0.20;
+			double taxRate30 = 0.30;
+			
+			System.out.print("Enter your weekly income amount: $ ");
+			weeklyIncome = scnr.nextDouble();
+			
+			
+			if (weeklyIncome < 500) {
+				avgTaxWithholding = weeklyIncome * taxRate10;
+			}
+			else if (weeklyIncome < 1500) {
+				avgTaxWithholding = weeklyIncome * taxRate15;
+			}
+			else if (weeklyIncome < 2500) {
+				avgTaxWithholding = weeklyIncome * taxRate20;
+			}
+			else  {
+				avgTaxWithholding = weeklyIncome * taxRate30;
+			}
+			
+			
+			System.out.printf("Weekly Average Tax Withholdings: $%.2f%n",avgTaxWithholding);
+		}
+	}
+
